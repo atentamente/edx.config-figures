@@ -2,7 +2,7 @@
 
 rm -rf edx.config-atentamente
 
-git clone https://github.com/lpm0073/edx.config-figures.git
+git clone https://github.com/atentamente/edx.config-figures.git
 chown edxapp -R edx.config-figures
 chgrp edxapp -R edx.config-figures
 
