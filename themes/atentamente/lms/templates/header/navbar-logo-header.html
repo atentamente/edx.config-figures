@@ -1,0 +1,96 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+from lms.djangoapps.ccx.overrides import get_current_ccx
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+
+# App that handles subdomain specific branding
+from branding import api as branding_api
+%>
+<style>
+  #logo-small-left {
+    float: left;
+    left:0;
+    margin-left: 75px;
+  }
+  #logo-small-right {
+    float: right;
+    right:0;
+    margin-right: 25px;
+  }
+  #logo-small-left, #logo-small-right {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+    top:0;
+    margin-top: 10px;
+  }
+  .course-name , .provider, .course-number{
+    color: #999 !important;
+  }
+/*
+  @media (min-width: 525px) and (max-width: 991px) {
+    #logo-small-right {
+      visibility: visible;
+      height: auto !important;
+      width: 200px !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .global-header .main-header {
+      height: 80px;
+    }
+
+    #logo-large-left {
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin-left: 0 !important;
+    }
+    #logo-small-left {
+      visibility: visible;
+      height: auto !important;
+      width: 200px !important;
+    }
+  }*/
+</style>
+<h1 class="header-logo">
+  <a href="/">
+    <%block name="navigation_logo">
+    ## This is the default site logo: "Lideres Educativos - Fundacion Banorte"
+    <img id="logo-large-left" class="logo" src="${branding_api.get_logo_url(is_secure)}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+
+    ##Responsive styling: these are reduced-size logos for both Banorte and Atentamente
+    <img id="logo-small-left" src="${static.url("images/logo_lideres_educativos-stacked.png")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+    <img id="logo-small-right" src="${static.url("images/logo-atentamente.png")}" alt="Atentamente logo" />
+    </%block>
+  </a>
+  % if course:
+    <div class="course-header">
+      <span class="provider">${course.display_org_with_default}:</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <%
+      display_name = course.display_name_with_default
+      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+        ccx = get_current_ccx(course.id)
+        if ccx:
+          display_name = ccx.display_name
+      %>
+      <span class="course-name">${display_name}</span>
+    </div>
+  % endif
+</h1>
+% if enable_enterprise_sidebar:
+  <div class="enterprise-tagline">
+    <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
+    % if tagline:
+      ${tagline}
+    % endif
+  </div>
+% endif
