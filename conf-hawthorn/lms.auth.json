@@ -1,11 +1,13 @@
 {
+    "ACE_CHANNEL_SAILTHRU_API_KEY": "", 
+    "ACE_CHANNEL_SAILTHRU_API_SECRET": "", 
     "ANALYTICS_API_KEY": "", 
-    "ANALYTICS_DATA_TOKEN": "", 
     "AWS_ACCESS_KEY_ID": null, 
     "AWS_QUERYSTRING_AUTH": false, 
     "AWS_S3_CUSTOM_DOMAIN": "SET-ME-PLEASE (ex. bucket-name.s3.amazonaws.com)", 
     "AWS_SECRET_ACCESS_KEY": null, 
     "AWS_STORAGE_BUCKET_NAME": "SET-ME-PLEASE (ex. bucket-name)", 
+    "BRANCH_IO_KEY": "", 
     "CC_PROCESSOR": {
         "CyberSource": {
             "MERCHANT_ID": "", 
@@ -22,7 +24,7 @@
         }
     }, 
     "CC_PROCESSOR_NAME": "CyberSource2", 
-    "CELERY_BROKER_PASSWORD": "zvxlKkdGEibHcvJs834JVDWPE16cCpZdkOy", 
+    "CELERY_BROKER_PASSWORD": "keZymvsPTZSRLku0mSUW9UA2jTQ3QfY8EbF", 
     "CELERY_BROKER_USER": "celery", 
     "CONTENTSTORE": {
         "ADDITIONAL_OPTIONS": {}, 
@@ -30,11 +32,11 @@
             "collection": "modulestore", 
             "connectTimeoutMS": 2000, 
             "db": "edxapp", 
-            "host": [
-                "localhost"
-            ], 
-            "password": "st1JpEK38A4VbU2SVDS7k0lWmnmEzGvGWQy", 
+            "host": "localhost", 
+            "password": "rAa3xa7MYCFLJxQRl9yXoRmFLQpCgdoK2KC", 
             "port": 27017, 
+            "read_preference": "SECONDARY_PREFERRED", 
+            "replicaSet": "", 
             "socketTimeoutMS": 3000, 
             "ssl": false, 
             "user": "edxapp"
@@ -42,10 +44,8 @@
         "ENGINE": "xmodule.contentstore.mongo.MongoContentStore", 
         "OPTIONS": {
             "db": "edxapp", 
-            "host": [
-                "localhost"
-            ], 
-            "password": "st1JpEK38A4VbU2SVDS7k0lWmnmEzGvGWQy", 
+            "host": "localhost", 
+            "password": "rAa3xa7MYCFLJxQRl9yXoRmFLQpCgdoK2KC", 
             "port": 27017, 
             "ssl": false, 
             "user": "edxapp"
@@ -60,7 +60,7 @@
             "HOST": "localhost", 
             "NAME": "edxapp", 
             "OPTIONS": {}, 
-            "PASSWORD": "15pmUREezC74lQaLpwq6BsfGLjYbaT2zKaH", 
+            "PASSWORD": "qMMugM71SxEL0BXKwyOuaZVaBa1gyD8bvhA", 
             "PORT": "3306", 
             "USER": "edxapp001"
         }, 
@@ -70,7 +70,7 @@
             "HOST": "localhost", 
             "NAME": "edxapp", 
             "OPTIONS": {}, 
-            "PASSWORD": "15pmUREezC74lQaLpwq6BsfGLjYbaT2zKaH", 
+            "PASSWORD": "qMMugM71SxEL0BXKwyOuaZVaBa1gyD8bvhA", 
             "PORT": "3306", 
             "USER": "edxapp001"
         }, 
@@ -80,7 +80,7 @@
             "HOST": "localhost", 
             "NAME": "edxapp_csmh", 
             "OPTIONS": {}, 
-            "PASSWORD": "sTfoHSLG5QXTyDsjZlWv2nDUurBsYNz1nPx", 
+            "PASSWORD": "hxnE8uuY4LXO96zzcBr0x0L81z5PmiqEepq", 
             "PORT": "3306", 
             "USER": "edxapp_cmsh001"
         }
@@ -95,26 +95,31 @@
         "collection": "modulestore", 
         "connectTimeoutMS": 2000, 
         "db": "edxapp", 
-        "host": [
-            "localhost"
-        ], 
-        "password": "st1JpEK38A4VbU2SVDS7k0lWmnmEzGvGWQy", 
+        "host": "localhost", 
+        "password": "rAa3xa7MYCFLJxQRl9yXoRmFLQpCgdoK2KC", 
         "port": 27017, 
+        "read_preference": "SECONDARY_PREFERRED", 
+        "replicaSet": "", 
         "socketTimeoutMS": 3000, 
         "ssl": false, 
         "user": "edxapp"
     }, 
     "ECOMMERCE_API_SIGNING_KEY": "SET-ME-PLEASE", 
     "EDX_API_KEY": "PUT_YOUR_API_KEY_HERE", 
-    "EMAIL_HOST_PASSWORD": "ctw4N5HKG35g2JgIlVbgALv1pZCcwZdubMe", 
+    "EMAIL_HOST_PASSWORD": "UVIdw88qLN3mJivUCZqYGQuz3ZqmzgiAT8i", 
     "EMAIL_HOST_USER": "", 
+    "ENTERPRISE_REPORTING_SECRET": "0000000000000000", 
     "ENTERPRISE_SERVICE_WORKER_USERNAME": "enterprise_worker", 
     "EVENT_TRACKING_SEGMENTIO_EMIT_WHITELIST": [], 
     "FACEBOOK_API_VERSION": "v2.1", 
     "FACEBOOK_APP_ID": "FACEBOOK_APP_ID", 
     "FACEBOOK_APP_SECRET": "FACEBOOK_APP_SECRET", 
+    "FERNET_KEYS": [
+        "DUMMY KEY CHANGE BEFORE GOING TO PRODUCTION"
+    ], 
     "GOOGLE_ANALYTICS_ACCOUNT": null, 
     "GOOGLE_ANALYTICS_LINKEDIN": "", 
+    "GOOGLE_ANALYTICS_TRACKING_ID": "", 
     "MODULESTORE": {
         "default": {
             "ENGINE": "xmodule.modulestore.mixed.MixedModuleStore", 
@@ -126,11 +131,11 @@
                             "collection": "modulestore", 
                             "connectTimeoutMS": 2000, 
                             "db": "edxapp", 
-                            "host": [
-                                "localhost"
-                            ], 
-                            "password": "st1JpEK38A4VbU2SVDS7k0lWmnmEzGvGWQy", 
+                            "host": "localhost", 
+                            "password": "rAa3xa7MYCFLJxQRl9yXoRmFLQpCgdoK2KC", 
                             "port": 27017, 
+                            "read_preference": "SECONDARY_PREFERRED", 
+                            "replicaSet": "", 
                             "socketTimeoutMS": 3000, 
                             "ssl": false, 
                             "user": "edxapp"
@@ -148,11 +153,11 @@
                             "collection": "modulestore", 
                             "connectTimeoutMS": 2000, 
                             "db": "edxapp", 
-                            "host": [
-                                "localhost"
-                            ], 
-                            "password": "st1JpEK38A4VbU2SVDS7k0lWmnmEzGvGWQy", 
+                            "host": "localhost", 
+                            "password": "rAa3xa7MYCFLJxQRl9yXoRmFLQpCgdoK2KC", 
                             "port": 27017, 
+                            "read_preference": "PRIMARY", 
+                            "replicaSet": "", 
                             "socketTimeoutMS": 3000, 
                             "ssl": false, 
                             "user": "edxapp"
@@ -174,12 +179,14 @@
         "class": "edx_proctoring.backends.null.NullBackendProvider", 
         "options": {}
     }, 
-    "PROFILE_IMAGE_SECRET_KEY": "aCLkvNUM1dGHr120pW4AwQP7XoHjqcOnmSnca9Y0Wp07Py1zOCHe9xKSxBmfd1kL2uNh0ozbBLMlm7YR9k8LxKQ2li18VN3a0xnN", 
-    "SECRET_KEY": "TfD32TzdTFiwYv18qcigi9pRMUotJBBreHbfi8wm22yTm2UdISyL19PYZMbsb93qzTyKerVkF9ZvT7tWS56gVco1V6Md3UI1nt6F", 
+    "PROFILE_IMAGE_SECRET_KEY": "dVTQwO0s7ndJxheYP7Dw99KDExC01TtRnpjvCB1iz9InEeET1GZcaOj6uHKMD5eSsxBFDaZFuoDMCSz4nQGzM4DEYMEjw9TUvtoh", 
+    "SECRET_KEY": "jO5MA9FMfQjLwjRC99qWtAAOh0m5UYYOFCUgJImDNxwfQ7glsUaG9akcbJErItu9CPj1zMyYEbl2R2dYbYDbL4789Nc5Goedf5KM", 
     "SEGMENT_KEY": null, 
     "SOCIAL_AUTH_OAUTH_SECRETS": "", 
     "SOCIAL_AUTH_SAML_SP_PRIVATE_KEY": "", 
+    "SOCIAL_AUTH_SAML_SP_PRIVATE_KEY_DICT": {}, 
     "SOCIAL_AUTH_SAML_SP_PUBLIC_CERT": "", 
+    "SOCIAL_AUTH_SAML_SP_PUBLIC_CERT_DICT": {}, 
     "SWIFT_AUTH_URL": null, 
     "SWIFT_AUTH_VERSION": null, 
     "SWIFT_KEY": null, 
@@ -197,8 +204,8 @@
     }, 
     "XQUEUE_INTERFACE": {
         "basic_auth": [
-            "SW2f0zJKXa3xtLpZ2yndztmALvTn5Xf07C5", 
-            "x41PTOs9qK2yir1d9JVlianJBr60ixgdayt"
+            "i1aVTLAOVTso0Sy99k7U8WW7kQcUcbXPQo0", 
+            "JdmL1D5zwxUDrzZDWvhRrUpvjeWE71cUjX0"
         ], 
         "django_auth": {
             "password": "password", 
@@ -208,5 +215,6 @@
     }, 
     "YOUTUBE_API_KEY": "PUT_YOUR_API_KEY_HERE", 
     "ZENDESK_API_KEY": "", 
+    "ZENDESK_OAUTH_ACCESS_TOKEN": "", 
     "ZENDESK_USER": ""
 }
